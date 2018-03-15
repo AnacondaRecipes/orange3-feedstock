@@ -26,13 +26,11 @@ requirements:
   host:
     - python
     - setuptools
-    - numpy         # [not (win and py36)]
-    - numpy         # [win and py36]
+    - numpy
   run:
     - python
+    - {{ pin_compatible('numpy') }}
     - setuptools    >=36.3
-    - {{ pin_compatible('numpy') }}            # [not (win and py36)]
-    - {{ pin_compatible('numpy') }}           # [win and py36]
     - scipy
     - scikit-learn  >=0.18.1
     - bottleneck
