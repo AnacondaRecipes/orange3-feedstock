@@ -33,17 +33,16 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - setuptools    >=36.3
-    - scipy
+    - scipy         >=0.16.1
     - scikit-learn  >=0.18.1
-    - bottleneck
-    - chardet       >=2.3.0
+    - bottleneck    >=1.0.0
+    - chardet       >=3.0.2
     - docutils
     - xlrd          >=0.9.2
-    - anyqt
-    - pyqtgraph
-    - joblib
-    - keyring               # [not linux]
-    - keyring       <10     # [linux]
+    - anyqt         >=0.0.8
+    - pyqtgraph     >=0.10.0
+    - joblib        >=0.9.4
+    - keyring
     - keyrings.alt
     - dill
     - pip
