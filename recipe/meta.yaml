@@ -57,6 +57,9 @@ requirements:
     - fasttsne
 
 test:
+  # Numpy's testing module has made some changes in 1.15+
+  requires:
+    - numpy <1.15
   commands:
     - orange-canvas --help
     - python -m unittest -v Orange.tests  # [not linux32]
