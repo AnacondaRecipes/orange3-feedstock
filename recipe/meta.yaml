@@ -10,11 +10,10 @@ source:
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    #- 0001-disable-tests-using-long-file-names.patch  # [not win]
-    #- 0002-Disable-test-involving-broken-elf.patch
+    - 0001-tweak-import-error-message-to-link-to-Numpy-MKL-trou.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . --no-deps -vv"
       #- rm ${SP_DIR}/Orange/tests/binary-blob.tab  # [unix]
