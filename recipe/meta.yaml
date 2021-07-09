@@ -27,17 +27,15 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ pin_compatible('numpy') }}
+    - cython
   host:
     - python
     - pip
     - wheel
     - setuptools >=40.8.0,<50.0
-    - numpy >=1.16.0
-    - cython
     - sphinx
     - recommonmark
-    - patch   #[not win]
-    - m2-patch  #[win]
   run:
     - python
     - pip >=9.0
