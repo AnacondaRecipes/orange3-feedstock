@@ -32,6 +32,8 @@ requirements:
     - pip
     - wheel
     - numpy >=1.13.0
+    - patch   #[not win]
+    - m2-patch  #[win]
   run:
     - python
     - setuptools >=36.3
