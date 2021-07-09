@@ -1,5 +1,5 @@
-{% set version = "3.23.1" %}
-{% set sha256 = "d77b4525a22762df2eb0de45696fe69e1cd6d573e4ef0de6f9a0d2bc1bcc0802" %}
+{% set version = "3.29.3" %}
+{% set sha256 = "ccf9d59a9c81a2905f3dd22d5c2a56ff7c030c3f62ca7aa39844c096faebbef3" %}
 
 package:
   name: orange3
@@ -10,7 +10,7 @@ source:
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - 0001-tweak-import-error-message-to-link-to-Numpy-MKL-trou.patch
+#    - 0001-tweak-import-error-message-to-link-to-Numpy-MKL-trou.patch
 
 build:
   number: 0
@@ -27,36 +27,45 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ pin_compatible('numpy') }}
+    - cython
   host:
     - python
     - pip
     - wheel
-    - numpy >=1.13.0
+    - setuptools >=40.8.0,<50.0
+    - {{ pin_compatible('numpy') }}
+    - cython
+    - sphinx
+    - recommonmark
   run:
     - python
+    - pip >=9.0
     - setuptools >=36.3
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.16.0
     - scipy >=0.16.1
-    - scikit-learn >=0.20.0
+    - scikit-learn >=0.22.0,!=0.23.0
     - bottleneck >=1.0.0
     - chardet >=3.0.2
     - docutils
     - xlrd >=0.9.2
     - xlsxwriter
-    - anyqt >=0.0.8
-    - pyqtgraph >=0.10.0
+    - anyqt >=0.0.11
+    - pyqtgraph >=0.11.0
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
-    - pip >=9.0
     - python.app  # [osx]
     - serverfiles
     - python-louvain >=0.13
     - requests
     - matplotlib >=2.0.0
     - openTSNE >=0.3.11
-    - pandas
+    - pandas >=1.0.0
+    - baycomp >=1.0.2
     - pyyaml
+    - openpyxl
+    - httpx>=0.14.0,<0.17
 #    - fasttsne >=0.2.12
     - orange-canvas-core >=0.1.7,<0.2a
     - orange-widget-base >=4.0a,<4.1a
