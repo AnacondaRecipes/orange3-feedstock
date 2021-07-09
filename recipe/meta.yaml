@@ -34,6 +34,8 @@ requirements:
     - pip
     - wheel
     - setuptools >=40.8.0,<50.0
+    - {{ pin_compatible('numpy') }}
+    - cython
     - sphinx
     - recommonmark
   run:
