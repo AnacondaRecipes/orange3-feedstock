@@ -9,8 +9,8 @@ source:
   fn: Orange3-{{ version }}.tar.gz
   url: https://github.com/biolab/orange3/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - 0001-tweak-import-error-message-to-link-to-Numpy-MKL-trou.patch
+  #  patches:
+  #    - 0001-tweak-import-error-message-to-link-to-Numpy-MKL-trou.patch
 
 build:
   number: 0
@@ -30,11 +30,11 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - wheel
     - numpy >=1.13.0
   run:
     - python
-    - setuptools >=36.3
     - {{ pin_compatible('numpy') }}
     - scipy >=0.16.1
     - scikit-learn >=0.20.0
@@ -47,7 +47,6 @@ requirements:
     - joblib >=0.9.4
     - keyring
     - keyrings.alt
-    - pip >=9.0
     - python.app  # [osx]
     - serverfiles
     - python-louvain >=0.13
@@ -60,6 +59,9 @@ requirements:
     - orange-canvas-core >=0.1.7,<0.2a
     - orange-widget-base >=4.0a,<4.1a
     - networkx
+    - openpyxl
+    - baycomp
+    - httpx
 
 test:
   commands:
