@@ -1,5 +1,5 @@
-{% set version = "3.23.1" %}
-{% set sha256 = "d77b4525a22762df2eb0de45696fe69e1cd6d573e4ef0de6f9a0d2bc1bcc0802" %}
+{% set version = "3.30.0" %}
+{% set sha256 = "d93f07ad2a3799a9ddf1d019f44433044e15dcf76015b4f39f5a1da365d8aea9" %}
 
 package:
   name: orange3
