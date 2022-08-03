@@ -19,6 +19,7 @@ source:
 
 build:
   number: 0
+  # trigger: 0
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
