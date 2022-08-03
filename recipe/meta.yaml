@@ -1,6 +1,13 @@
 {% set name = "Orange3" %}
 {% set version = "3.32.0" %}
 
+# on our linux builders there is no X11 installed and therefore import
+# test will fail
+{% if target_platform != "linux-aarch64" and target_platform != "linux-64"%}
+{% set enable_testingui = true %}
+{% else %}
+{% set enable_testingui = false %}
+{% endif %}
 
 package:
   name: {{ name|lower }}
@@ -77,6 +84,7 @@ requirements:
     - ipykernel !=6.11.0
     - {{ pin_compatible('numpy') }}
 
+{% if enable_testingui %}
 test:
   imports:
     - Orange
@@ -89,6 +97,7 @@ test:
     - python -m unittest -v Orange.tests Orange.widgets.tests  # [win]
   requires:
     - pip
+{% endif %}
 
 app:
   entry: orange-canvas
