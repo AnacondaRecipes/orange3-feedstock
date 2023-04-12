@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.32.0" %}
+{% set version = "3.34.0" %}
 
 # on our linux builders there is no X11 installed and therefore import
 # test will fail
@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: b4dcd44861f197d4e5e1c2209fd1c711e44ab7605f618aef6b2c01c174e4b25f
+  sha256: d81970d5811e9c281848f6709a7c66133e58cc0ecb9f46041609f3456122d198
 
 build:
   number: 0
