@@ -23,7 +23,7 @@ build:
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   skip: True  # [linux and (s390x or ppc64le)]
 
 requirements:
