@@ -77,10 +77,6 @@ requirements:
     - catboost !=1.0.0  # [not linux or x86_64]
     - xlrd >=1.2.0
     - xlsxwriter
-    # python3.7 on conda-forge has build problems due to incompatibility between required
-    # setuptools between ipykernel and some other libraries:
-    # https://github.com/ipython/ipykernel/pull/900
-    - {{ pin_compatible('numpy') }}
 
 {% if enable_testingui %}
 test:
