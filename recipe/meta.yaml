@@ -117,3 +117,5 @@ extra:
     - ales-erjavec
     - markotoplak
     - primozgodec
+  skip-lints:
+    - duplicate_key_in_meta_yaml
