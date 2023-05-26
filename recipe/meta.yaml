@@ -102,6 +102,7 @@ about:
   home: https://orange.biolab.si/
   summary: Orange, a component-based data mining framework.
   license: GPL-3.0-or-later
+  license_family: GPL
   license_file: LICENSE
   summary: component-based data mining framework
   description: |
