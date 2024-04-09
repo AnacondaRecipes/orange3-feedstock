@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.34.0" %}
+{% set version = "3.36.2" %}
 
 # on our linux builders there is no X11 installed and therefore import
 # test will fail
@@ -15,11 +15,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
-  sha256: d81970d5811e9c281848f6709a7c66133e58cc0ecb9f46041609f3456122d198
+  sha256: d436bb98d33aa6ea7b6083359032c704da1a6a0e656c068ce806e2a3f319af8c
 
 build:
   number: 0
-  # trigger: 1
   entry_points:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
