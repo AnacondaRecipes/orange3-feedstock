@@ -1,0 +1,6 @@
+channels:
+  - https://staging.continuum.io/prefect/fs/url-normalize-feedstock/pr2/ca85677
+  - https://staging.continuum.io/prefect/fs/requests-cache-feedstock/pr2/7b8c1e1
+  - https://staging.continuum.io/prefect/fs/orange-canvas-core-feedstock/pr3/5281936
+  - https://staging.continuum.io/prefect/fs/orange-widget-base-feedstock/pr3/4fcfd0f
+  - https://staging.continuum.io/prefect/fs/xgboost-feedstock/pr12/b27e294
