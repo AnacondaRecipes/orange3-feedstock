@@ -83,6 +83,7 @@ test:
     - Orange
     - Orange.canvas
   commands:
+    - pip check
     # - python -c "import pkg_resources; pkg_resources.require('Orange3')"
     - orange-canvas --help
     - export QT_QPA_PLATFORM=offscreen  # [not win]
@@ -98,7 +99,7 @@ app:
   summary: data visualization and data analysis tool
   icon: icon_48x48.png
 about:
-  home: https://orange.biolab.si/
+  home: https://orangedatamining.com/
   summary: Orange, a component-based data mining framework.
   license: GPL-3.0-or-later
   license_family: GPL
@@ -107,7 +108,7 @@ about:
   description: |
     Open source data visualization and data analysis for novice and expert.
     Interactive workflows with a large toolbox.
-  doc_url: https://orange.biolab.si/docs/
+  doc_url: https://orangedatamining.com/docs
   dev_url: https://github.com/biolab/orange3
 
 extra:
@@ -116,5 +117,3 @@ extra:
     - ales-erjavec
     - markotoplak
     - primozgodec
-  skip-lints:
-    - duplicate_key_in_meta_yaml
