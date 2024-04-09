@@ -16,6 +16,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Orange3-{{ version }}.tar.gz
   sha256: d436bb98d33aa6ea7b6083359032c704da1a6a0e656c068ce806e2a3f319af8c
+  patches:
+    - patches/0001-setup.py-Replace-use-of-imp-module.patch
 
 build:
   number: 0
@@ -29,6 +31,8 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - patch   # [not win]
+    - m2-patch    # [win]
   host:
     - pip
     - python
