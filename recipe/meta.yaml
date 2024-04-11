@@ -98,6 +98,7 @@ app:
   entry: orange-canvas
   summary: data visualization and data analysis tool
   icon: icon_48x48.png
+  type: desk
 about:
   home: https://orangedatamining.com/
   summary: Orange, a component-based data mining framework.
