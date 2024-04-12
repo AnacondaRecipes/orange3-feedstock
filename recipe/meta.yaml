@@ -36,7 +36,7 @@ requirements:
   host:
     - pip
     - python
-    - cython
+    - cython >=3.0
     - docutils
     - numpy
     - recommonmark
