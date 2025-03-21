@@ -39,7 +39,7 @@ requirements:
     - setuptools >=51.0
     - sphinx
     - wheel
-    - trubar
+    - trubar >=0.3.4
   run:
     - anyqt >=0.2.0
     - baycomp >=1.0.2
