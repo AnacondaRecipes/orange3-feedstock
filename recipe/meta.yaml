@@ -23,7 +23,7 @@ build:
     - orange-canvas = Orange.canvas.__main__:main
   osx_is_app: true
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
-  skip: True  # [linux and (s390x or ppc64le)]
+  skip: True  # [py<39 or s390x]
 
 requirements:
   build:
@@ -32,14 +32,14 @@ requirements:
   host:
     - pip
     - python
-    - cython >=3.0
+    - cython
     - docutils
     - numpy
     - recommonmark
     - setuptools
     - sphinx
     - wheel
-    - trubar >=0.3.4
+    - trubar
   run:
     - anyqt >=0.2.0
     - baycomp >=1.0.2
