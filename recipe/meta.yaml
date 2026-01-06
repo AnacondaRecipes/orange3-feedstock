@@ -31,7 +31,7 @@ requirements:
     - numpy {{ numpy }}
     - recommonmark
     - setuptools >=51.0
-    - sphinx >4.2.0,<8
+    - sphinx >=4.2.0,<8
     # In the requirements, but not used from the code
     #- myst-parser
     - wheel
