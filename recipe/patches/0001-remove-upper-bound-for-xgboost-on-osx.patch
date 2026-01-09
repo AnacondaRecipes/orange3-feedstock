@@ -1,0 +1,28 @@
+From 7dc29fa3a761e0d15f08fe8af2c06d04c86277ef Mon Sep 17 00:00:00 2001
+From: Andrii Osipov <aosipov@anaconda.com>
+Date: Tue, 6 Jan 2026 06:42:01 -0800
+Subject: [PATCH] remove upper-bound for xgboost on osx
+
+---
+ requirements-core.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/requirements-core.txt b/requirements-core.txt
+index eb52c62..2da0be3 100644
+--- a/requirements-core.txt
++++ b/requirements-core.txt
+@@ -19,8 +19,9 @@ requests
+ scikit-learn>=1.5.1
+ scipy>=1.9
+ serverfiles		# for Data Sets synchronization
+-xgboost>=1.7.4,<2.1; sys_platform=="darwin"
+-xgboost>=1.7.4; sys_platform!="darwin"
++#xgboost>=1.7.4,<2.1; sys_platform=="darwin"
++#xgboost>=1.7.4; sys_platform!="darwin"
++xgboost>=1.7.4
+ # Reading Excel files
+ xlrd>=1.2.0
+ # Writing Excel Files
+-- 
+2.39.3 (Apple Git-146)
+
