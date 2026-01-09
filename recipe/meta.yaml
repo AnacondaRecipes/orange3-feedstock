@@ -125,7 +125,7 @@ about:
   license_family: GPL
   license_file: LICENSE
   description: |
-    Open source data visualization and data analysis for novice and expert.
+    Open source data visualization and data analysis for novice and expert
     Interactive workflows with a large toolbox.
   doc_url: https://orangedatamining.com/docs
   dev_url: https://github.com/biolab/orange3
