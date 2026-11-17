@@ -1,8 +1,4 @@
-# Staging channels: test against the exact builds from the orange-canvas-core
-# (0.2.10) and orange-widget-base (4.29.0) update PRs instead of pkgs/main.
-# Remove both once the updated packages are published to pkgs/main.
 channels:
-  - https://staging.continuum.io/pbp/fs/orange-canvas-core-feedstock/prPR_NUM/SHORT_SHA
-  - https://staging.continuum.io/pbp/fs/orange-widget-base-feedstock/prPR_NUM/SHORT_SHA
-build_env_vars:
-  ANACONDA_ROCKET_ENABLE_PY315: yes
+  - https://staging.continuum.io/pbp/fs/qasync-feedstock/pr4/0cb86d3
+  - https://staging.continuum.io/pbp/fs/orange-canvas-core-feedstock/pr10/f32f3e0
+  - https://staging.continuum.io/pbp/fs/orange-widget-base-feedstock/pr10/10c2ce0

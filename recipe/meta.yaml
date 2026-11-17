@@ -32,8 +32,8 @@ requirements:
     - recommonmark
     - setuptools >=51.0
     - sphinx >=4.2.0,<8
-    - sphinx-multiproject
-    - myst-parser
+    # - sphinx-multiproject
+    # - myst-parser
     - wheel
     - trubar >=0.3.4
   run:
