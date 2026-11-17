@@ -64,8 +64,7 @@ requirements:
     # for Data Sets synchronization
     - serverfiles
     - tzdata
-    - xgboost >=1.7.4,<2.1  # [osx]
-    - xgboost >=1.7.4  # [not osx]
+    - xgboost >=1.7.4
     # Reading Excel files
     - xlrd >=1.2.0
     # Writing Excel Files
