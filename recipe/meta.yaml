@@ -1,5 +1,5 @@
 {% set name = "Orange3" %}
-{% set version = "3.40.0" %}
+{% set version = "3.41.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: 049564ad26cbc648b6e1a8be430fd640bf35fbbc6693945672056e570f69353d
+  sha256: be28280acce4863b84658aa73a5af3c3a89cc6a1bc15d78e7325fe3b3aa7dd8b
   patches:
     - patches/0001-remove-upper-bound-for-xgboost-on-osx.patch
 
@@ -33,7 +33,8 @@ requirements:
     - setuptools >=51.0
     - sphinx >=4.2.0,<8
     # In the requirements, but not used from the code
-    #- myst-parser
+    # - myst-parser
+    # - sphinx-multiproject
     - wheel
     - trubar >=0.3.4
   run:
@@ -49,30 +50,32 @@ requirements:
     # for alternative keyring implementations
     - keyrings.alt
     - networkx
-    - numpy >=1.21.0,<2.4
+    - numpy >=1.21.0
     - openpyxl >=3.1.3
     # 0.7.0 segfaults
     - openTSNE >=0.6.2,!=0.7.0
     - packaging
-    - pandas >=2.0.1,<3
+    - pandas >=2.0.1
     - python-louvain >=0.13
     - pyyaml
     - requests
-    - scikit-learn >=1.5.1
+    # 1.10 has breaking changes in LogisticRegression, MDS
+    - scikit-learn >=1.5.1,<1.10
     - scipy >=1.9
     # for Data Sets synchronization
     - serverfiles
+    - tzdata
     # won`t rebuild old xgboost for py313 on osx
-    #- xgboost >=1.7.4,<2.1  # [osx]
+    # - xgboost >=1.7.4,<2.1  # [osx]
     - xgboost >=1.7.4
     # Reading Excel files
     - xlrd >=1.2.0
     # Writing Excel Files
     - xlsxwriter
     # Dep to use import Orange
-    - orange-canvas-core >=0.2.5,<0.3a
+    - orange-canvas-core >=0.2.9,<0.3a
     # Deps to use the orange-canvas script
-    - orange-widget-base >=4.25.0
+    - orange-widget-base >=4.29.0
     # Gui deps
     - anyqt >=0.2.0
     - matplotlib-base >=3.2.0
